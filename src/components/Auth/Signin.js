@@ -18,7 +18,7 @@ class Signin extends Component {
 
     signIn = async (e) => {
         e.preventDefault();
-        if (this.state.email.length == 0 || this.state.password.length == 0)
+        if (this.state.email.length === 0 || this.state.password.length === 0)
             return alert("Email and Pasword is Required");
 
         this.setState({ loading: true })
@@ -28,7 +28,7 @@ class Signin extends Component {
 
     signUp = async (e) => {
         e.preventDefault();
-        if (this.state.email.length == 0 || this.state.password.length == 0) return alert("Email and Pasword is Required");
+        if (this.state.email.length === 0 || this.state.password.length === 0) return alert("Email and Pasword is Required");
         else if (this.state.password.length < 6)
             return alert("Password Must be atleast 6 chars");
 

@@ -13,12 +13,13 @@
     font-size: 1.4rem;
 }
 
-.footer a {
+.footer span {
     text-decoration: none;
     color: aliceblue;
+    cursor: pointer;
 }
 
-.footer a:hover {
+.footer span:hover {
     color: rgb(68, 68, 255);
 }
 

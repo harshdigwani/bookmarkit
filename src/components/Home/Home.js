@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
 import Base from '../Base/Base';
 import './Home.css';
-import Signin from '../Auth/Signin';
 import { isLoggedIn } from '../../services/Auth';
 import { setShareText, getShareText } from '../../services/TextShare';
-import Spinner from '../Core/Spinner';
 
 class Home extends Component {
 
@@ -48,7 +45,7 @@ class Home extends Component {
     }
 
     render() {
-        const { text, uid, user } = this.state;
+        const { text } = this.state;
         return (
             <Base>
                 {/* {!this.state.user && <Redirect to="signin" />} */}
