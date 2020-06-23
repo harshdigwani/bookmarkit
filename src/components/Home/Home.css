@@ -1,0 +1,58 @@
+.share-text {
+    width: 90%;
+    margin-top: 3%;
+    text-align: center;
+    height: 70vh;
+    border: none;
+    font-size: 3rem;
+    background-color: #f7f7f7;
+    box-shadow: 0 10px 30px -15px #00000033;
+}
+
+.btns{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn-share {
+    padding: 1rem;
+    margin: 1rem 1rem 0rem 0rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border: none;
+    width: 30%;
+    border-radius: .5rem;
+    background-color: rgb(68, 238, 68);
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+.bg-blue {
+    background-color: rgb(4, 4, 78);
+}
+
+.btn-share:hover {
+    background-color: rgb(59, 184, 59);
+}
+
+.bg-blue:hover {
+    background-color: rgb(3, 3, 56);
+}
+
+
+.btn-share:active {
+    box-shadow: rgb(20, 65, 20);
+}
+
+
+@media only screen and (max-width:810px) {
+    .btn-share {
+        width: 50%;
+    }
+
+    .share-text {
+        box-shadow: none;
+    }
+}

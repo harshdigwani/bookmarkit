@@ -1,0 +1,29 @@
+.footer {
+    position: absolute;
+    bottom: -5rem;
+    left: 0;
+    right: 0;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: aliceblue;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.footer a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.footer a:hover {
+    color: rgb(68, 68, 255);
+}
+
+@media only screen and (max-width:1200px) {
+    footer {
+        height: 5rem;
+    }
+}
