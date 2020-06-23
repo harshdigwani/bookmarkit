@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Router, Route, Switch } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
 import Signin from './components/Auth/Signin';
 import Home from './components/Home/Home';
@@ -13,7 +13,7 @@ const Routes = () => {
 
     return (
         <Router history={history} >
-        {/* <Router> */}
+            {/* <Router> */}
             <Switch>
                 <Route exact path="/signin" component={Signin} />
                 <Route exact path="/" component={Home} />
