@@ -14,8 +14,7 @@ class Home extends Component {
         this.state = {
             user: null,
             text: "",
-            uid: "",
-            loading: true
+            uid: ""
         }
     }
 
@@ -25,7 +24,6 @@ class Home extends Component {
         this.setState({
             user: user,
             uid: user.uid,
-            loading: false
         })
     }
 
@@ -50,10 +48,9 @@ class Home extends Component {
     }
 
     render() {
-        const { text, uid, user, loading } = this.state;
+        const { text, uid, user } = this.state;
         return (
             <Base>
-                {loading && <Spinner />}
                 {/* {!this.state.user && <Redirect to="signin" />} */}
                 <div className="container">
                     {/* <h1>Home component</h1> */}
