@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import { signIn, signUp, isLoggedIn } from '../../services/Auth';
 import Base from '../Base/Base';
 import './Signin.css';
+import Spinner from '../Core/Spinner';
 
 class Signin extends Component {
 
@@ -10,22 +11,30 @@ class Signin extends Component {
         super(props);
         this.state = {
             email: "",
-            password: ""
+            password: "",
+            loading: false
         }
     }
 
     signIn = async (e) => {
         e.preventDefault();
-        if (!this.state.email || !this.state.password) return
+        if (this.state.email.length == 0 || this.state.password.length == 0)
+            return alert("Email and Pasword is Required");
+
+        this.setState({ loading: true })
         await signIn(this.state.email, this.state.password);
-        this.setState({ email: "", password: "" });
+        this.setState({ email: "", password: "", loading: false });
     }
 
     signUp = async (e) => {
         e.preventDefault();
-        if (!this.state.email || !this.state.password) return
+        if (this.state.email.length == 0 || this.state.password.length == 0) return alert("Email and Pasword is Required");
+        else if (this.state.password.length < 6)
+            return alert("Password Must be atleast 6 chars");
+
+        this.setState({ loading: true })
         await signUp(this.state.email, this.state.password);
-        this.setState({ email: "", password: "" });
+        this.setState({ email: "", password: "", loading: false });
     }
 
 
@@ -43,6 +52,7 @@ class Signin extends Component {
 
         return (
             <Base>
+                {this.state.loading && <Spinner />}
                 <div className="container">
                     <h1 className="display-1">Login</h1>
                     <form className="flex-col login-form">
@@ -52,7 +62,7 @@ class Signin extends Component {
                             name="email"
                             placeholder="Email"
                             value={this.state.email}
-                            onChange={this.handleChange} focus="true"/>
+                            onChange={this.handleChange} focus="true" />
 
                         <label>Password</label>
                         <input

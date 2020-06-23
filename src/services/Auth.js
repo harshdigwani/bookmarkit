@@ -10,6 +10,10 @@ export const signUp = async (email, password) => {
         if (err.code === "auth/email-already-in-use") {
             alert("Email already is in use");
         }
+        if (err.code === "auth/invalid-email") {
+            alert("Incorect Email Format");
+        }
+
         console.error(err.message);
     }
 }
@@ -25,6 +29,10 @@ export const signIn = async (email, password) => {
         if (err.code === "auth/user-not-found") {
             alert("Email or pass is incorect");
         }
+        if (err.code === "auth/invalid-email") {
+            alert("Incorect Email Format");
+        }
+
         console.error(err.message);
     }
 }

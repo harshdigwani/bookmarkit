@@ -3,6 +3,7 @@ import { isLoggedIn } from '../../services/Auth';
 import { getAllBookmarks, addBookmark, deleteBookmark } from '../../services/Bookmark';
 import Base from '../Base/Base';
 import './Bookmark.css';
+import Spinner from '../Core/Spinner';
 
 class Bookmark extends Component {
 
@@ -12,7 +13,8 @@ class Bookmark extends Component {
             bookmarks: [],
             uid: "",
             url: "",
-            title: ""
+            title: "",
+            loading: true
         }
     }
 
@@ -23,7 +25,8 @@ class Bookmark extends Component {
             uid: user.uid,
             bookmarks,
             title: "",
-            url: ""
+            url: "",
+            loading: false
         })
     }
 
@@ -53,7 +56,7 @@ class Bookmark extends Component {
     }
 
     render() {
-        const { bookmarks } = this.state
+        const { bookmarks, loading } = this.state
         return (
             <Base>
                 <div className="container">
@@ -80,11 +83,11 @@ class Bookmark extends Component {
                     </form>
 
 
-
-                    {bookmarks.length > 0 && (<>
+                    {loading && <Spinner />}
+                    {bookmarks.length > 0 ? (<>
                         <hr style={{ width: "80%" }} />
                         <h1 className="bookmark-heading"><u>Your Bookmarks!</u></h1>
-                    </>)}
+                    </>) : <h5 className="bookmark-heading">You Don't have any Bookmarks!</h5>}
                     <br />
                     {bookmarks.length > 0 && Object.values(bookmarks).map(bookmark => (
                         <div className="bookmark" key={bookmark.id}>

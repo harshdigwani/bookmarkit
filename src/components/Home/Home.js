@@ -5,6 +5,7 @@ import './Home.css';
 import Signin from '../Auth/Signin';
 import { isLoggedIn } from '../../services/Auth';
 import { setShareText, getShareText } from '../../services/TextShare';
+import Spinner from '../Core/Spinner';
 
 class Home extends Component {
 
@@ -13,7 +14,8 @@ class Home extends Component {
         this.state = {
             user: null,
             text: "",
-            uid: ""
+            uid: "",
+            loading: true
         }
     }
 
@@ -22,7 +24,8 @@ class Home extends Component {
         if (!user) return;
         this.setState({
             user: user,
-            uid: user.uid
+            uid: user.uid,
+            loading: false
         })
     }
 
@@ -47,9 +50,10 @@ class Home extends Component {
     }
 
     render() {
-        const { text, uid, user } = this.state;
+        const { text, uid, user, loading } = this.state;
         return (
             <Base>
+                {loading && <Spinner />}
                 {/* {!this.state.user && <Redirect to="signin" />} */}
                 <div className="container">
                     {/* <h1>Home component</h1> */}
