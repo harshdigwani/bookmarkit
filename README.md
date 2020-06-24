@@ -19,12 +19,12 @@
 
 
 
-![alt Snapshot1](https://github.com/harshdigwani/GITPLUS/blob/master/Screenshots/1.gif?raw=true)
+![alt Snapshot1](https://github.com/harshdigwani/bookmarkit/blob/master/Screenshots/1.gif?raw=true)
 
 
-![alt Snapshot2](https://github.com/harshdigwani/GITPLUS/blob/master/Screenshots/2.gif?raw=true)
+![alt Snapshot2](https://github.com/harshdigwani/bookmarkit/blob/master/Screenshots/2.gif?raw=true)
 
 
-![alt Snapshot3](https://github.com/harshdigwani/GITPLUS/blob/master/Screenshots/3.gif?raw=true)
+![alt Snapshot3](https://github.com/harshdigwani/bookmarkit/blob/master/Screenshots/3.gif?raw=true)
 
 
