@@ -1,7 +1,22 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [],
+  "short_name": "Bookmarkit!",
+  "name": "Bookmarkit!",
+  "icons": [{
+      "src": "images/avtar.svg",
+      "type": "image/svg",
+      "sizes": "676x676"
+    },
+    {
+      "src": "images/logo.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "images/favicon.ico",
+      "type": "image/x-icon",
+      "sizes": "48x48"
+    }
+  ],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
