@@ -1,7 +1,8 @@
 {
   "short_name": "Bookmarkit!",
   "name": "Bookmarkit!",
-  "icons": [{
+  "icons": [
+    {
       "src": "images/avtar.svg",
       "type": "image/svg",
       "sizes": "676x676"
