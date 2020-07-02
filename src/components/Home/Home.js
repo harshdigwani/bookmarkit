@@ -53,7 +53,7 @@ class Home extends Component {
                     {/* <h1>Home component</h1> */}
                     <input className="share-text" onChange={this.handleChange} value={text} placeholder="Paste Your content" />
                     <span className="btns">
-                        <button className="btn-share" onClick={this.shareText}>Share <span className="fa fa-share" /></button>
+                        <button className="btn-share" onClick={this.shareText}>Save <span className="fa fa-cloud" /></button>
                         <button className="btn-share bg-blue" onClick={this.getText}>Get &nbsp;<span className="fa fa-cloud-download" /></button>
                     </span>
                 </div>
